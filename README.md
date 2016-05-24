@@ -1,4 +1,4 @@
-# MWDN test task
+# Simple Order task
 
 ##### Requirements for run and development
 * NodeJs >= 4.x.x
