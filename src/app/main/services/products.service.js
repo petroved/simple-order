@@ -15,8 +15,9 @@ export class productsService {
         this.products = this.getProductsFromServer()
           .then((response) => {
             this.$window.localStorage.setItem('products', angular.toJson(response.data));
+            this.products = response.data;
 
-            return response.data;
+            return this.products;
           });
       }
     }
