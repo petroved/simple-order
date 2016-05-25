@@ -126,12 +126,13 @@ module.exports = {
       name: 'common',
       async: true,
       children: true,
-      minChunks: Infinity
+      minChunks: Infinity,
     }),
     new ExtractTextPlugin('assets/styles/[name]' + '.[chunkhash].css', { allChunks: true }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.join(paths.src, 'index.html')
+      template: path.join(paths.src, 'index.html'),
+      inject:   'body',
     }),
     // new webpack.optimize.UglifyJsPlugin({
     //   minimize: true,
